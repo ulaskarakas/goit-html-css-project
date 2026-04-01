@@ -2,39 +2,74 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Focus.Frame</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-    <!-- Google Fonts - DM Sans -->
+    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" />
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/hero.html" icon-path="img/hero-icons.svg#logo" />
-      <load src="./partials/ad.html" />
-      <load src="./partials/about.html" />
-      <load
-        src="./partials/courses.html"
-        icon-path="img/courses-icons.svg#logo"
-      />
-      <load src="./partials/mentors.html" />
-      <load src="./partials/signup.html" />
-      <load
-        src="./partials/reviews.html"
-        icon-path="img/reviews-icons.svg#logo"
-      />
-    </main>
+    <footer class="footer">
+      <div class="footer-top">
+        <h2>Focus.Frame</h2>
+        <a href="tel:+380665438912">+38 066 543 8912</a>
+        <p>1678 S. Pioneer Road Salt Lake City UT 84104</p>
+      </div>
 
-    <load src="./partials/footer.html" />
+      <div class="footer-links">
+        <ul class="social">
+          <li>
+            <a href="https://www.instagram.com/goit.turkiye/" target="_blank"
+              >INSTAGRAM</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/people/GOIT-T%C3%BCrkiye/61558036560161/"
+              target="_blank"
+              >FACEBOOK</a
+            >
+          </li>
+          <li>
+            <a href="https://m.youtube.com/@GoITTurkey" target="_blank"
+              >YOUTUBE</a
+            >
+          </li>
+        </ul>
 
-    <script type="module" src="./main.js"></script>
+        <ul class="menu">
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">OUR COURSES</a></li>
+          <li><a href="#">OUR MENTORS</a></li>
+          <li><a href="#">REVIEWS</a></li>
+          <li><a href="#">CONTACTS</a></li>
+        </ul>
+      </div>
+
+      <form class="footer-form">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          required
+          pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+        />
+        <button type="submit">Go</button>
+      </form>
+
+      <div class="footer-bottom">
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Public Offering Agreement</a></li>
+        </ul>
+        <p>
+          2024 Focus Frame <br />
+          © All rights reserved
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
