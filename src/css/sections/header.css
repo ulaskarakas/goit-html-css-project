@@ -144,6 +144,11 @@ header .container {
         line-height: 1.56;
     }
 
+    .signup-btn:focus {
+        background-color: var(--black-soft);
+        color: var(--brown);
+    }
+
     .mobile-menu {
         width: 480px;
         height: 1024px;
@@ -181,6 +186,11 @@ header .container {
 
     .signup-btn {
         padding: 16px 84px;
+    }
+
+    .signup-btn:hover {
+        background-color: var(--black-soft);
+        color: var(--brown);
     }
 
     .active {
