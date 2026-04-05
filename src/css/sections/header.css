@@ -1,71 +1,228 @@
-/* Styles for Mobile devices */
-* {
-    font-family: "DM Sans", sans-serif;
-    text-transform: uppercase;
-    box-sizing: border-box;
+/* Reset */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 a {
-    color: var(--white);
+    color: currentColor;
     text-decoration: none;
-    display: flex;
-    align-items: center;
 }
 
-header {
-    margin-top: 20px;
-    position: relative;
+button {
+    cursor: pointer;
 }
 
-header .container {
-    height: 50px;
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-.menu {
+/*** Styles for Mobile devices ***/
+
+#header .container {
     display: flex;
     justify-content: space-between;
-    border: 1px solid var(--white);
-    border-radius: 12px;
-    padding: 9px 20px;
-    background-color: var(--black);
+    gap: 14px;
+    padding: 20px 20px;
 }
 
-.menu-left {
+/* header left*/
+.header-inner-left-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    background-color: var(--black);
+    width: 100%;
+}
+
+/* logo */
+.header-logo-div>a {
     display: flex;
     align-items: center;
 }
 
-.logo {
-    width: 127px;
+.header-logo {
+    max-width: 127px;
     height: 20px;
 }
 
-.menu-right {
+/* menu */
+.header-menu-div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-.menu-list {
+/* menu list */
+.header-menu-ul {
     display: none;
 }
 
+/* mobile menu icons */
+.header-mobile-menu-icons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* camera icon */
 .camera-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 32px;
     height: 32px;
     border: none;
     border-radius: 50%;
-    background: var(--black-soft);
+    background-color: var(--black-soft);
+    color: rgba(190, 166, 158, 0.4);
 }
 
+.camera-logo {
+    width: 16px;
+    height: 16px;
+}
+
+.camera-btn:hover {
+    color: var(--brown)
+}
+
+/* mobile menu icon */
 .nav-btn {
+    background: none;
     border: none;
-    background: transparent;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
 }
 
-.signup-btn {
+.nav-logo {
+    width: 32px;
+    height: 22px;
+}
+
+/* sign-up button div */
+.header-inner-right-div {
     display: none;
 }
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+    #header .container {
+        gap: 14px;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        padding-left: 31px;
+        padding-right: 31px;
+    }
+
+    .header-inner-left-div {
+        min-width: 462px;
+        padding: 16px 20px;
+    }
+
+    /* logo */
+    .header-logo {
+        max-width: 123px;
+        height: 16px;
+    }
+
+    /* camera button */
+    .camera-btn {
+        display: none;
+    }
+
+    /* mobile menu icon */
+    .nav-logo {
+        width: 40px;
+        height: 28px;
+    }
+
+    /* sign-up button div */
+    .header-inner-right-div {
+        display: flex;
+    }
+
+    /* sign up button */
+    .header-signup-btn {
+        width: 100%;
+        color: var(--black);
+        background-color: var(--white);
+        border-radius: 12px;
+        min-width: 187px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-signup-btn:hover {
+        color: var(--brown);
+        background-color: var(--black-soft);
+    }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1280px) {
+    #header .container {
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 80px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    /* sign up button */
+    .header-signup-btn {
+        min-width: 239px;
+    }
+
+    /* menu list */
+    .header-menu-ul {
+        display: flex;
+        gap: 28px;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0;
+        text-transform: uppercase;
+    }
+
+    .header-menu-ul li:hover {
+        color: var(--brown);
+    }
+
+    /* mobile menu icons */
+    .header-mobile-menu-icons {
+        display: none;
+    }
+}
+
+
+/* Styles for Mobile devices
 
 .mobile-menu {
     background-color: var(--brown);
@@ -119,37 +276,8 @@ header .container {
     height: auto;
 }
 
-/* Styles for Tablet devices */
+Styles for Tablet devices 
 @media only screen and (min-width: 768px) {
-    header .container {
-        display: flex;
-        justify-content: space-between;
-        gap: 14px;
-        height: 60px;
-    }
-
-    .menu {
-        flex-grow: 1;
-    }
-
-    .camera-btn {
-        display: none;
-    }
-
-    .signup-btn {
-        display: block;
-        padding: 16px 58px;
-        border: none;
-        border-radius: 12px;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 1.56;
-    }
-
-    .signup-btn:focus {
-        background-color: var(--black-soft);
-        color: var(--brown);
-    }
 
     .mobile-menu {
         width: 480px;
@@ -173,29 +301,8 @@ header .container {
     }
 }
 
-/* Styles for Desktop devices */
+Styles for Desktop devices 
 @media only screen and (min-width: 1200px) {
-    .nav-btn {
-        display: none;
-    }
-
-    .menu-list {
-        display: flex;
-        justify-content: space-between;
-        gap: 28px;
-        list-style: none;
-    }
-
-    .signup-btn {
-        padding: 16px 84px;
-    }
-
-    .signup-btn:hover {
-        background-color: var(--black-soft);
-        color: var(--brown);
-    }
-
-    .active {
-        color: var(--brown);
-    }
+    
 }
+*/
