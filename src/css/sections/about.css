@@ -21,6 +21,7 @@ p {
 .about h2 {
   font-size: 28px;
   margin-bottom: 40px;
+  font-weight: 500;
 }
 
 .about h2 span {
@@ -42,6 +43,8 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   font-size: 14px;
+  line-height: 18px;
+
 }
 
 @media (min-width: 768px) {
